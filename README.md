@@ -1,4 +1,4 @@
-# FastAPI + Vite Project
+# FastAPI + Vite + TailwindCSS Project
 
 A project integrating FastAPI (backend) and Vite (frontend) with support for multiple entry points.
 
@@ -19,12 +19,21 @@ project/
     ├── src/
     │   ├── main.ts          # Main entry point (on all pages)
     │   ├── admin.ts         # For admin panel
+    │   ├── css/        #  Styles
     │   └── ...
     ├── package.json
     └── vite.config.js
 ```
 
+## Requirements
+
+- **Node.js:** 22.x or higher
+- **Python:** 3.10 or higher
+- **Yarn:** 1.22 or higher
+
 ## Installation
+
+Make sure you're using Node 22
 
 ### Backend
 
@@ -139,40 +148,5 @@ async def admin(request: Request):
 ## Tech Stack
 
 - **Backend:** FastAPI, Jinja2, Python 3.10+
-- **Frontend:** Vite, TypeScript
+- **Frontend:** Vite, TypeScript, Tailwind CSS
 - **Integration:** Vite Manifest for production builds
-
-## Scripts
-
-### Frontend
-
-```bash
-yarn dev      # Start dev server
-yarn build    # Build for production
-yarn preview  # Preview production build
-```
-
-### Backend
-
-```bash
-uvicorn main:app --reload           # Dev mode
-DEV=1 uvicorn main:app --reload     # Dev with Vite HMR
-uvicorn main:app                     # Production
-```
-
-## Troubleshooting
-
-**Error "Manifest not found":**
-
-- Make sure you built the frontend: `cd frontend && yarn build`
-- Check the manifest path in `main.py`
-
-**Styles not applied:**
-
-- In dev mode, styles are injected automatically
-- In production, check that CSS files exist in manifest.json
-
-**404 on static files:**
-
-- Verify that `static/dist/` exists
-- Make sure `app.mount("/static", ...)` is configured correctly
