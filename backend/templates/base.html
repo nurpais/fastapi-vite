@@ -7,6 +7,6 @@
     {% set assets = vite(*entries|default([])) %} {{ assets.styles|safe }}
   </head>
   <body>
-    {%block content%}{% endblock %} {{assets.scripts|safe}}
+    <div class="container mx-auto px-4">{%block content%}{% endblock %} {{assets.scripts|safe}}</div>
   </body>
 </html>

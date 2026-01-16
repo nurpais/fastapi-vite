@@ -9,8 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
     "enketo-transformer": "^4.2.0",
-    "lit": "^3.3.1"
+    "lit": "^3.3.1",
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "typescript": "~5.9.3",
