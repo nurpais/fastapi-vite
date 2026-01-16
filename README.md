@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ```bash
 cd frontend
-npm install
+yarn install
 ```
 
 ## Development
@@ -50,7 +50,7 @@ Run both servers simultaneously:
 
 ```bash
 cd frontend
-npm run dev
+yarn dev
 ```
 
 **Terminal 2 - FastAPI:**
@@ -75,7 +75,7 @@ Open http://localhost:8000
 
 ```bash
 cd frontend
-npm run build
+yarn build
 ```
 
 Files will be built to `backend/static/dist/`
@@ -147,9 +147,9 @@ async def admin(request: Request):
 ### Frontend
 
 ```bash
-npm run dev      # Start dev server
-npm run build    # Build for production
-npm run preview  # Preview production build
+yarn dev      # Start dev server
+yarn build    # Build for production
+yarn preview  # Preview production build
 ```
 
 ### Backend
@@ -164,7 +164,7 @@ uvicorn main:app                     # Production
 
 **Error "Manifest not found":**
 
-- Make sure you built the frontend: `cd frontend && npm run build`
+- Make sure you built the frontend: `cd frontend && yarn build`
 - Check the manifest path in `main.py`
 
 **Styles not applied:**
